@@ -6,8 +6,8 @@
 const int trigPin = 4;
 const int echoPin = 5;
 
-const char* ssid = ""; //your WiFi details
-const char* password = ""; //your WiFi password
+const char* ssid = "";
+const char* password = "";
 
 const int esp32Port = 80;
 
@@ -28,7 +28,7 @@ float readDistance() {
 
 void handleRoot() {
   String html = "<html><body>";
-  html += "<h1 style='text-align:center;'>V-03 BilgeMonitoring (ESP32 WROOM 32D with the HC-SRD4 Sensor)</h1>";
+  html += "<h1 style='text-align:center;'>BilgeMonitoring (ESP32 WROOM 32D with the HC-SRD4 Sensor)</h1>";
   html += "<div style='text-align:center;'>";
   html += "<h2>Distance</h2>";
   html += "<p id='distance' style='font-size:48px;'></p>";
@@ -62,7 +62,7 @@ void setup() {
     Serial.println("Connecting to WiFi...");
   }
 
-  Serial.print("192.168.0.61");
+  Serial.print("your ip");
   Serial.println(WiFi.localIP());
 
   pinMode(trigPin, OUTPUT);
