@@ -72,16 +72,12 @@ To get started with the NautiGuard BilgeMonitor, follow these steps:
 - Ultrasonic Sensor Echo -> ESP32 GPIO 5
 - Ultrasonic Sensor GND -> ESP32 GND
 
-
-
-
-
-
 ### Software Setup with VS Code and PlatformIO
 
 1. **Clone this Repository:**
    - Open VS Code and navigate to the directory where you want to clone the repository.
    - Open the terminal in VS Code and run the following command to clone the repository:
+    
      ```
      git clone https://github.com/NauticApp/BilgeMonitor.git
      ```
@@ -112,14 +108,95 @@ Alternatively, you can download the ZIP file and extract its contents into the d
    - Make sure the baud rate in your code and the Serial Monitor match (e.g., `Serial.begin(115200
  
 
-3. [Usage Guide](Documentation/Usage_Guide.md): Explore the features and capabilities of the BilgeMonitor, including real-time monitoring, alert customization, and remote access.
+ **Hardware Setup**:
 
-4. [Troubleshooting](Documentation/Troubleshooting.md): If you encounter any issues, refer to this section for troubleshooting tips and solutions.
+1. - Ensure you have Visual Studio Code (VS Code) with the PlatformIO extension installed.
 
+2. **Software Setup**:
+   
+
+   - Clone the Project Repository:
+     - Open VS Code and navigate to the directory where you want to clone the project.
+     - Open the terminal and run the following command to clone the project:
+       ```bash
+       git clone https://github.com/your-username/your-project.git
+       ```
+
+   - Open the Project in VS Code:
+     - Open VS Code and click on "Open Folder."
+     - Select the folder where you cloned the project.
+
+   - Update Wi-Fi Credentials (in `main.cpp`):
+     - Replace `your_WiFi_details` with your Wi-Fi SSID.
+     - Replace `and_the_WiFi_password` with your Wi-Fi password.
+
+3. **Compile and Upload the Code**:
+   - Connect your ESP32 to your computer using a USB cable.
+   - In VS Code, click on the PlatformIO icon on the left sidebar.
+   - Click on "Open" to open the project.
+   - Click on the "Upload" icon to compile and upload the code to your ESP32.
+
+4. **Obtain ESP32 IP Address**:
+   - Open the Serial Monitor in VS Code.
+   - After successful connection to Wi-Fi, the ESP32 will print its local IP address (e.g., `192.168.0.61`).
+   - Note down this IP address.
+
+5. **Add a ESP32 Device in NauticApp**:
+
+   - Open NauticApp on your Android device.
+   - Navigate to the "Devices" section by going to the NauticGuard section (the last icon at the button left of the screen), there also the "Marine Engine Monitoring" section in the Marine Engineering Hub.
+   - Click on the "Add ESP32 device" button to add a new device.
+   - Enter a name for your device (e.g., "Engine Monitor").
+   - Enter the ESP32 IP Address (e.g. 192.168.0.61/sensors), in the IP Address field, (this IP address can also be obtained from the ESP32 Serial Monitor).
+   - Click "Save" to add the device.
+
+6. **View Sensor Data in NauticApp**:
+   - Once added, your ESP32 device will appear in the list of devices and you will now view the real-time sensor data from the ultrasonic distance sensor.
+
+7. **Monitoring**:
+   - You can now monitor the data from your ESP32 device in NauticApp, including distance measurements from the ultrasonic sensor.
+
+
+
+
+4. [Troubleshooting](Documentation/Troubleshooting.md): 
+
+- **Screen Refresh:**
+  If you encounter any issues with the viewing, you can try refreshing the screen by rotating your phone. NauticApp has a feature that allows you to refresh the display by simply rotating the device.
+
+- **Proper URL Format:**
+  Ensure that you input the correct URL in the format `http://ip_address/sensors` when adding your ESP32 device. This is crucial for NauticApp to properly communicate with your device and retrieve the sensor data.
+
+- **Check ESP32 Connectivity:**
+  Double-check that your ESP32 is connected to the same network as your Android device. If the ESP32 is not properly connected to the network, NauticApp won't be able to communicate with it.
+
+- **Verify ESP32 IP Address:**
+  Make sure you have entered the correct IP address of your ESP32. You can obtain this address from the ESP32 Serial Monitor.
+
+- **Check Wi-Fi Connection:**
+  Ensure that your Android device is connected to a stable Wi-Fi network. If the Wi-Fi connection is weak or unstable, it may cause communication issues between NauticApp and the ESP32.
+
+- **Inspect ESP32 Serial Monitor:**
+  Monitor the ESP32 Serial Monitor for any error messages or logs. This can provide valuable information about the status and any potential issues with the ESP32.
+
+- **Review ESP32 Code:**
+  Double-check the ESP32 code to ensure there are no syntax errors or logical issues that may be causing communication problems.
+
+- **Verify NauticApp Version:**
+  Make sure you have the latest version of NauticApp installed on your Android device. Outdated versions may have compatibility issues.
+
+- **Check Permissions:**
+  Ensure that NauticApp has the necessary permissions to access the network on your Android device. This can be checked in your device's settings.
+
+- **Restart Devices:**
+  Sometimes, simply restarting both your Android device and the ESP32 can resolve connectivity issues.
+
+- **Community Support:**
+  If you continue to experience issues, consider reaching out to the NauticApp community or forums for additional help and insights.
 
 ## Contributing
 
-We welcome contributions to the NautiGuard BilgeMonitor project. If you have ideas for improvements, bug reports, or want to contribute to the development, please check our [Contribution Guidelines](CONTRIBUTING.md).
+We welcome contributions to the NautiGuard BilgeMonitor project. If you have ideas for improvements, bug reports.
 
 ## License
 
