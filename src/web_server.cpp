@@ -7,7 +7,7 @@ extern WebServer server;
 
 void handleRoot() {
   String html = "<html><body>";
-  html += "<h1 style='text-align:center;'>V-05 BilgeMonitoring (ESP32 WROOM 32D with the HC-SRD4 Sensor)</h1>";
+  html += "<h1 style='text-align:center;'>V-06 BilgeMonitoring (ESP32 WROOM 32D with the HC-SRD4 Sensor)</h1>";
   html += "<div style='text-align:center;'>";
   html += "<h2>Distance</h2>";
   html += "<p id='distance' style='font-size:48px;'></p>";

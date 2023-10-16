@@ -7,11 +7,12 @@
 
 const int trigPin = 4;
 const int echoPin = 5;
+const char* ssid = "your_WiFi_details"; 
+const char* password = "and_the_WiFi_password"; 
 
-const char* ssid = ""; //your WiFi details
-const char* password = ""; //and your WiFi password
 
 WebServer server(80);
+
 
 void setup() {
   Serial.begin(115200);
@@ -22,7 +23,7 @@ void setup() {
     Serial.println("Connecting to WiFi...");
   }
 
-  Serial.print("");// ESP32 IP i.e. 192.168.0.50
+  Serial.print("192.168.0.61"); //this is the IP address you need to use on NauticApp when adding a devices
   Serial.println(WiFi.localIP());
 
   pinMode(trigPin, OUTPUT);
