@@ -23,6 +23,7 @@
     - [Example Connection](#example-connection)
   - [Software Setup with VS Code and PlatformIO](#software-setup-with-vs-code-and-platformio)
 - [NauticApp Setup](#nauticapp-setup)
+- [Accessing Sensor Data via Web Browser](#accessing-sensor-data-via-web-browser)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [License](#license)
