@@ -45,9 +45,8 @@ BilgeMonitor is a cost-effective solution for vessel owners to monitor water lev
 1. Clone this repository to your local machine:
 
    ```bash
+
    git clone https://github.com/username/BilgeMonitor.git
-
-
 
 ## Getting Started
 
@@ -79,8 +78,9 @@ BilgeMonitor is a cost-effective solution for vessel owners to monitor water lev
    - Open the terminal in VS Code and run the following command to clone the repository:
 
 ```bash
-Copy code
+
 git clone https://github.com/NauticApp/BilgeMonitor.git
+
 ```
 
 Alternatively, you can download the ZIP file and extract its contents into the desired directory
