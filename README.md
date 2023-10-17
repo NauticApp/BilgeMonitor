@@ -166,7 +166,23 @@ You can keep this IP or replace it with one of your choice. Just ensure that the
 **Note:** Ensure that your Android device and ESP32 are connected to the same network for proper communication.
 
 
+## Accessing Sensor Data via Web Browser
 
+Once you have set up your ESP32 and it's connected to your local network, you can easily check the sensor data using a web browser. Follow these steps:
+
+1. Open a web browser on any device connected to the same Wi-Fi network as your ESP32.
+
+2. In the address bar, type the IP address of your ESP32. If you haven't changed it, the default IP is:
+
+```Bash
+http://192.168.0.61
+```
+
+Press Enter.
+
+3. The web page will display real-time sensor data from the ultrasonic distance sensor. You should see information such as water level measurements.
+
+4. Please note that you need to be on the same local network as the ESP32 for this to work. If everything is set up correctly, data should refresh each 2 seconds or so.
 
 
 ## Troubleshooting
