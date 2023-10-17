@@ -1,6 +1,8 @@
-# NautiGuard BilgeMonitor
+# NautiGuard: BilgeMonitor
 
-BilgeMonitor is a boat safety system designed to monitor the water level in the bilge of your vessel. It offers real-time water level tracking, automatic bilge pump control, and remote access via the NauticApp. Keep your vessel safe and dry with this essential marine monitoring solution.
+**NautiGuard is part of [NauticApp](https://nauticapp.github.io/) and it is a collection of marine IoT (Internet of Things) projects designed to enhance the boating experience for users. Each project within NautiGuard focuses on specific aspects of marine monitoring and safety. These projects are open source, meaning users can build and customize their own solutions using readily available components.**
+
+**BilgeMonitor** is one of the NautiGuard projects, it is a boat safety system designed to monitor the water level in the bilge of your vessel. It offers real-time water level tracking, automatic bilge pump control, and remote access via [NauticApp](https://play.google.com/store/apps/details?id=io.dcoldeira.nauticapp&pli=1). Keep your vessel safe and dry with this essential marine monitoring solution.
 
 ## Features
 
