@@ -20,8 +20,9 @@
 - [Installation](#installation)
 - [Getting Started](#getting-started)
   - [Connecting Ultrasonic Sensor to ESP32](#connecting-ultrasonic-sensor-to-esp32)
+    - [Example Connection](#example-connection)
   - [Software Setup with VS Code and PlatformIO](#software-setup-with-vs-code-and-platformio)
-  - [Example Connection](#example-connection)
+- [NauticApp Setup](#nauticapp-setup)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [License](#license)
@@ -69,6 +70,13 @@ BilgeMonitor is a cost-effective solution for vessel owners to monitor water lev
 
    - Connect a power source (e.g., USB cable) to the ESP32 for providing power.
 
+### Example Connection:
+
+- Ultrasonic Sensor VCC -> ESP32 5V
+- Ultrasonic Sensor Trig -> ESP32 GPIO 4
+-  Ultrasonic Sensor Echo -> ESP32 GPIO 5
+- Ultrasonic Sensor GND -> ESP32 GND
+
 
 
 
@@ -105,22 +113,61 @@ Alternatively, you can download the ZIP file and extract its contents into the d
 - Make sure the platform is set to espressif32.
 - Check if board is set to the appropriate ESP32 variant (esp32dev).
 
-5) Upload Code to ESP32:
+5) Add your WiFi and IP details to your code:
+- navegate to **src/main.cpp**
+- Locate the following lines of code:
+
+```cpp
+const char* ssid = "your_WiFi_details"; 
+const char* password = "and_the_WiFi_password"; 
+```
+- Replace **"your_WiFi_details"** with your Service Set Identifier (SSID), which is the name of your WiFi network.
+- Replace **"and_the_WiFi_password"** with your WiFi password.
+
+**Safety Disclaimer:** Please exercise caution when entering your WiFi details. Ensure you do not share your code or upload it to public repositories with sensitive information. It's recommended to keep this information private and secure.
+
+- You need to assign an IP to your ESP32. By default, it is set to:
+
+```cpp
+Serial.print("192.168.0.61");
+``` 
+
+You can keep this IP or replace it with one of your choice. Just ensure that the chosen IP is unique within your network to avoid conflicts. If you decide to change the IP, make sure to update it in NauticApp as well.
+
+
+6) Upload Code to ESP32:
 
 - Connect your ESP32 board to your computer using a USB cable.
 - In PlatformIO, under PROJECT TASKS, click on Upload to flash the code to the ESP32.
 
-6) Monitor Serial Output:
+7) Monitor Serial Output:
 
 - Open the Serial Monitor in PlatformIO to view the output from the ESP32.
 - Make sure the baud rate in your code and the Serial Monitor match (e.g., Serial.begin(115200)).
 
-### Example Connection:
+## NauticApp Setup
 
-- Ultrasonic Sensor VCC -> ESP32 5V
-- Ultrasonic Sensor Trig -> ESP32 GPIO 4
- Ultrasonic Sensor Echo -> ESP32 GPIO 5
-- Ultrasonic Sensor GND -> ESP32 GND
+1. Open NauticApp on your Android device.
+
+2. Navigate to the **NauticGuard** section (the last icon at the bottom left of the screen).
+
+3. Click on the "Add ESP32 Device" button to add a new device.
+
+4. Enter a name for your device (e.g., "Bilge Monitor").
+
+5. Enter the ESP32 IP Address (e.g., `http://192.168.0.61/sensors`) in the IP Address field. You can obtain this IP address from the ESP32 Serial Monitor.
+
+6. Click "Save" to add the device.
+
+7. Once added, your BilgeMonitor device will appear in the list of devices in NauticApp.
+
+8. You can now monitor the real-time water level data from your BilgeMonitor in NauticApp.
+
+**Note:** Ensure that your Android device and ESP32 are connected to the same network for proper communication.
+
+
+
+
 
 ## Troubleshooting
 
