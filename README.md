@@ -48,7 +48,7 @@ BilgeMonitor is a cost-effective solution for vessel owners to monitor water lev
 
    ```bash
 
-   git clone https://github.com/username/BilgeMonitor.git
+   git clone https://github.com/NauticApp/BilgeMonitor.git
 
 ## Getting Started
 
